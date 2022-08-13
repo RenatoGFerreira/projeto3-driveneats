@@ -1,7 +1,14 @@
-function selecionado(card){
-    window.alert('foi')
-    const escolhido = document.querySelector(".selecionado")
-    const opcao = document.querySelector(card)
+function selecionado(elemento){
+    let objeto = document.querySelector(".selecionado")
 
-    opcao.classList.toggle("selecionado")
+
+    if(objeto){
+        objeto.classList.remove("selecionado")
+    }
+    if(elemento === objeto){
+        elemento.classList.toggle('selecionado')
+    }
+    elemento.classList.toggle('selecionado')
+
+    console.log(elemento)
 }
