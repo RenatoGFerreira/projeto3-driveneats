@@ -19,6 +19,7 @@ body{
     background-color: #E5E5E5;
 }
 
+
 header{
     background-color: #CF2B2B;
     color: #fff;
@@ -29,6 +30,66 @@ header{
     left: 0;
     display: flex;
     align-items: center;
+}
+
+/* ********** FECHAMENTO PEDIDO ********** */
+
+#confirmer-order{
+    background-color: #50D074;
+    width: 337px;
+    height: 353px;
+    position: absolute;
+    top: 150%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 9px;  
+}
+
+#confirmer-order h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.confirmer-order-menu{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price-button1,
+.price-button2{
+    width: 329px;
+    height: 52px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 100px;
+    background-color: #fff;
+    color: #50D074;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.price-button2{
+    background-color: #50D074;
+    color: #fff;
+}
+
+.display-none{
+ display: none;   
+ visibility: hidden;
 }
 
 /* ********** CABECALHO ********** */
@@ -88,6 +149,7 @@ header{
     width: 172px;
     height: 216px;
     margin-left: 19px;
+    cursor: pointer;
 
     border-radius: 9px;
     box-shadow: 0 0 10px -4px;
@@ -137,7 +199,7 @@ header{
 }
 
 .selecionado{
-    border: 10px solid red;
+    border: 10px solid #32B72F;
 }
 
 
@@ -161,4 +223,19 @@ footer{
     height: 61px;
     border: none;
     border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.btn-accept2{
+    color: #fff;
+    background-color: #CF2B2B;
+    width: 364px;
+    height: 61px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
 }

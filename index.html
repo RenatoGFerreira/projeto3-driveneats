@@ -9,62 +9,89 @@
     <title>projeto3-driveneats</title>
 </head>
 <body>
+    <!-- 
+        NECESSITA CLICAR DUAS VEZES EM CADA ITEM SELECIONADO 
+        PARA MARCA-LO
+     -->
     <header>
         <div id="logo">
             <h1 id="logo-title">DrivenEats</h1>
             <h3 id="logo-subtitle">Sua comida em 6 minutos</h3>
         </div>
+        <div id="confirmer-order" class="display-none">
+            <div>
+                <h1>Confirme seu Pedido</h1>
+            </div>
+            <div class="confirmer-order-menu">
+                <div class="order-finish">
+                    <p class="pedido1">hamburguer</p>
+                    <p class="pedido2">bebida</p>
+                    <p class="pedido3">sobremesa</p>
+                    <p class="pedido4">TOTAL</p>
+                </div>
+                <div class="price-finish">
+                    <p class="preco1">preço hamburguer</p>
+                    <p class="preco2">preço bebida</p>
+                    <p class="preco3">preço sobremesa</p>
+                    <p class="preco4">R$XX,XX</p>
+                </div>
+            </div>
+            <div class="price-buttons">
+                <button onclick="finalizadoPedido()" class="price-button1">Tudo certo, pode pedir!</button>
+                <button onclick="refazerPedido()" class="price-button2">Cancelar</button>
+            </div>
+        </div> 
     </header> 
     <main>
         <h1 id="plate">Primeiro, seu prato</h1>
         <div id="choice-plate">
             <div id="card">
-                <div onclick="selecionado(this)" class="card-margin1" id="card-margin">
+                <div onclick="selecionadoComida(this)" class="card-margin opcao1" id="card-margin">
                     <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
                     <div>
-                        <span class="text-one">Frango Yin Yang</span>
-                        <span class="text-two">Um pouco de batata, um pouco de salada</span>
+                        <span class="text-one">Hamburguer</span>
+                        <span class="text-two">Pão de Brioche, hamburguer 180g</span>
+                        <span class="text-three">R$ 12,90</span>
+                    </div>
+                </div>
+            </div> 
+            <div id="card">
+                <div onclick="selecionadoComida(this)" class="card-margin opcao2" id="card-margin">
+                    <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
+                    <div>
+                        <span class="text-one">X-Burguer</span>
+                        <span class="text-two">O dobro do queijo pra você</span>
+                        <span class="text-three">R$ 16,90</span>
+                    </div>
+                </div>
+            </div> 
+            <div id="card">
+                <div onclick="selecionadoComida(this)" class="card-margin opcao3" id="card-margin">
+                    <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
+                    <div>
+                        <span class="text-one">Triple-Burguer</span>
+                        <span class="text-two">Muita, mas muita carne mesmo</span>
                         <span class="text-three">R$ 14,90</span>
                     </div>
                 </div>
             </div> 
             <div id="card">
-                <div onclick="selecionado(this)" class="card-margin2" id="card-margin">
+                <div onclick="selecionadoComida(this)" class="card-margin opcao4" id="card-margin">
                     <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
                     <div>
-                        <span class="text-one">Frango Yin Yang</span>
-                        <span class="text-two">Um pouco de batata, um pouco de salada</span>
-                        <span class="text-three">R$ 14,90</span>
+                        <span class="text-one">X-Tudão</span>
+                        <span class="text-two">Mais completo impossivel de fazer</span>
+                        <span class="text-three">R$ 19,90</span>
                     </div>
                 </div>
             </div> 
             <div id="card">
-                <div onclick="selecionado(this)" class="card-margin3" id="card-margin">
+                <div onclick="selecionadoComida(this)" class="card-margin opcao5" id="card-margin">
                     <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
                     <div>
-                        <span class="text-one">Frango Yin Yang</span>
-                        <span class="text-two">Um pouco de batata, um pouco de salada</span>
-                        <span class="text-three">R$ 14,90</span>
-                    </div>
-                </div>
-            </div> 
-            <div id="card">
-                <div id="card-margin">
-                    <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
-                    <div>
-                        <span class="text-one">Frango Yin Yang</span>
-                        <span class="text-two">Um pouco de batata, um pouco de salada</span>
-                        <span class="text-three">R$ 14,90</span>
-                    </div>
-                </div>
-            </div> 
-            <div id="card">
-                <div id="card-margin">
-                    <img src="./imagens/pratos/frango_yin_yang 2.png" alt="">
-                    <div>
-                        <span class="text-one">Frango Yin Yang</span>
-                        <span class="text-two">Um pouco de batata, um pouco de salada</span>
-                        <span class="text-three">R$ 14,90</span>
+                        <span class="text-one">Champion-Burguer</span>
+                        <span class="text-two">O mais pedido e saboroso da casa</span>
+                        <span class="text-three">R$ 15,90</span>
                     </div>
                 </div>
             </div> 
@@ -72,7 +99,7 @@
         <h1 id="drink">Agora, sua bebida</h1>
         <div id="choice-drink">
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoBebida(this)" class="card-margin opcao1" id="card-margin">
                     <img src="./imagens/bebidas/coquinha_gelada 2.png" alt="">
                     <div>
                         <span class="text-one">Coca-Cola</span>
@@ -82,42 +109,42 @@
                 </div>
             </div>
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoBebida(this)" class="card-margin opcao2" id="card-margin">
                     <img src="./imagens/bebidas/coquinha_gelada 2.png" alt="">
                     <div>
-                        <span class="text-one">Coca-Cola</span>
+                        <span class="text-one">Coca-Cola Zero</span>
                         <span class="text-two">Lata 350ml</span>
-                        <span class="text-three">R$ 4,90</span>
+                        <span class="text-three">R$ 5,00</span>
                     </div>
                 </div>
             </div>
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoBebida(this)" class="card-margin opcao3" id="card-margin">
                     <img src="./imagens/bebidas/coquinha_gelada 2.png" alt="">
                     <div>
-                        <span class="text-one">Coca-Cola</span>
-                        <span class="text-two">Lata 350ml</span>
-                        <span class="text-three">R$ 4,90</span>
+                        <span class="text-one">Monster</span>
+                        <span class="text-two">Lata 550ml</span>
+                        <span class="text-three">R$ 9,90</span>
                     </div>
                 </div>
             </div>
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoBebida(this)" class="card-margin opcao4" id="card-margin">
                     <img src="./imagens/bebidas/coquinha_gelada 2.png" alt="">
                     <div>
                         <span class="text-one">Coca-Cola</span>
-                        <span class="text-two">Lata 350ml</span>
-                        <span class="text-three">R$ 4,90</span>
+                        <span class="text-two">Pet 2 Litros</span>
+                        <span class="text-three">R$ 10,90</span>
                     </div>
                 </div>
             </div>
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoBebida(this)" class="card-margin opcao5" id="card-margin">
                     <img src="./imagens/bebidas/coquinha_gelada 2.png" alt="">
                     <div>
-                        <span class="text-one">Coca-Cola</span>
+                        <span class="text-one">Suco</span>
                         <span class="text-two">Lata 350ml</span>
-                        <span class="text-three">R$ 4,90</span>
+                        <span class="text-three">R$ 7,90</span>
                     </div>
                 </div>
             </div>
@@ -125,7 +152,17 @@
         <h1 id="dessert">Por fim, sua sobremesa</h1>
         <div id="choice-dessert">
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoSobremesa(this)" class="card-margin opcao1" id="card-margin">
+                    <img src="./imagens/sobremesas/pudim 2.png" alt="">
+                    <div>
+                        <span class="text-one">Pavê</span>
+                        <span class="text-two">Um show de pavê</span>
+                        <span class="text-three">R$ 9,90</span>
+                    </div>
+                </div>
+            </div>  
+            <div id="card">
+                <div onclick="selecionadoSobremesa(this)" class="card-margin opcao2" id="card-margin">
                     <img src="./imagens/sobremesas/pudim 2.png" alt="">
                     <div>
                         <span class="text-one">Pudim</span>
@@ -135,51 +172,40 @@
                 </div>
             </div>  
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoSobremesa(this)" class="card-margin opcao3" id="card-margin">
                     <img src="./imagens/sobremesas/pudim 2.png" alt="">
                     <div>
-                        <span class="text-one">Pudim</span>
-                        <span class="text-two">Apenas pudim</span>
+                        <span class="text-one">Macarrone</span>
+                        <span class="text-two">Você vai querer outro</span>
                         <span class="text-three">R$ 7,90</span>
                     </div>
                 </div>
             </div>  
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoSobremesa(this)" class="card-margin opcao4" id="card-margin">
                     <img src="./imagens/sobremesas/pudim 2.png" alt="">
                     <div>
-                        <span class="text-one">Pudim</span>
-                        <span class="text-two">Apenas pudim</span>
-                        <span class="text-three">R$ 7,90</span>
+                        <span class="text-one">Brigadeiro</span>
+                        <span class="text-two">Cremoso que dá dó</span>
+                        <span class="text-three">R$ 11,90</span>
                     </div>
                 </div>
             </div>  
             <div id="card">
-                <div id="card-margin">
+                <div onclick="selecionadoSobremesa(this)" class="card-margin opcao5" id="card-margin">
                     <img src="./imagens/sobremesas/pudim 2.png" alt="">
                     <div>
-                        <span class="text-one">Pudim</span>
-                        <span class="text-two">Apenas pudim</span>
-                        <span class="text-three">R$ 7,90</span>
+                        <span class="text-one">Pudim Light</span>
+                        <span class="text-two">Não pesa nada</span>
+                        <span class="text-three">R$ 8,90</span>
                     </div>
                 </div>
             </div>  
-            <div id="card">
-                <div id="card-margin">
-                    <img src="./imagens/sobremesas/pudim 2.png" alt="">
-                    <div>
-                        <span class="text-one">Pudim</span>
-                        <span class="text-two">Apenas pudim</span>
-                        <span class="text-three">R$ 7,90</span>
-                    </div>
-                </div>
-            </div>  
-        </div>  
+        </div> 
     </main>
     <footer>
-        <div>
-            <button class="btn-accept" type="submit">Selecione os 3 itens para fechar o pedido</button>
-        </div>
+            <button onclick="fazerPedido()" class="btn-accept" type="btn">Selecione os 3 itens para fechar o pedido</button>
+
     </footer>
     <script src="js/script.js"></script>
 </body>
