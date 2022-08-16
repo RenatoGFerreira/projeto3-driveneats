@@ -6,30 +6,17 @@ let sobremesaEscolhida;
 let sobremesaEscolhidaPreco;
 let totalPedido;
 
-//Só funciona com dois cliques
-//Só funciona com dois cliques
-//Só funciona com dois cliques
-//Só funciona com dois cliques
-//Só funciona com dois cliques
-//Só funciona com dois cliques
-
 function selecionadoComida(item){
     let comidaSelecionada = document.querySelector("#choice-plate .selecionado")
-    let comidaSelecionadaItem = document.querySelector("#choice-plate .selecionado .text-one")
-    let comidaSelecionadaPreco = document.querySelector("#choice-plate .selecionado .text-three")
 
-    
     if(comidaSelecionada !== null){
         comidaSelecionada.classList.remove('selecionado')
     }
-    
-    
-    
     item.classList.add('selecionado')
 
 
-    hamburguerEscolhido = comidaSelecionadaItem.innerHTML;
-    hamburguerEscolhidoPreco = comidaSelecionadaPreco.innerHTML;
+    hamburguerEscolhido = item.querySelector(".text-one").innerHTML
+    hamburguerEscolhidoPreco = item.querySelector(".text-three").innerHTML
     
     console.log(hamburguerEscolhido, hamburguerEscolhidoPreco, item)
     
@@ -39,8 +26,6 @@ function selecionadoComida(item){
 
 function selecionadoBebida(item){
     let bebidaSelecionada = document.querySelector("#choice-drink .selecionado")
-    let bebidaSelecionadaItem = document.querySelector("#choice-drink .selecionado .text-one")
-    let bebidaSelecionadaPreco = document.querySelector("#choice-drink .selecionado .text-three")
     
     if(bebidaSelecionada !== null){
         bebidaSelecionada.classList.remove('selecionado')
@@ -48,8 +33,8 @@ function selecionadoBebida(item){
     item.classList.add('selecionado')
 
 
-    bebidaEscolhida = bebidaSelecionadaItem.innerHTML;
-    bebidaEscolhidaPreco = bebidaSelecionadaPreco.innerHTML;
+    bebidaEscolhida = item.querySelector(".text-one").innerHTML
+    bebidaEscolhidaPreco = item.querySelector('.text-three').innerHTML
     
     console.log(bebidaEscolhida, bebidaEscolhidaPreco)
     botaoContinuar()
@@ -59,8 +44,6 @@ function selecionadoBebida(item){
 
 function selecionadoSobremesa(item){
     let sobremesaSelecionada = document.querySelector("#choice-dessert .selecionado")
-    let sobremesaSelecionadaItem = document.querySelector("#choice-dessert .selecionado .text-one")
-    let sobremesaSelecionadaPreco = document.querySelector("#choice-dessert .selecionado .text-three")
     
     if(sobremesaSelecionada !== null){
         sobremesaSelecionada.classList.remove('selecionado')
@@ -68,8 +51,8 @@ function selecionadoSobremesa(item){
     item.classList.add('selecionado')
 
 
-    sobremesaEscolhida = sobremesaSelecionadaItem.innerHTML;
-    sobremesaEscolhidaPreco = sobremesaSelecionadaPreco.innerHTML;
+    sobremesaEscolhida = item.querySelector(".text-one").innerHTML
+    sobremesaEscolhidaPreco = item.querySelector(".text-three").innerHTML
     
     console.log(sobremesaEscolhida, sobremesaEscolhidaPreco)
     botaoContinuar()
@@ -150,7 +133,7 @@ function finalizadoPedido(){
     -Sobremesa: ${sobremesaEscolhida} \n
     Total: R$ ${totalPedido}`)
     
-    window.location = `https://wa.me/?text=${pedido}`
+    window.location = `https://wa.me/5531991627440?text=${pedido}`
 
     console.log('Olá, gostaria de fazer o pedido: \n- Prato:' + hamburguerEscolhido + '\n-Bebida ' + bebidaEscolhida + '\n-Sobremesa ' + sobremesaEscolhida + '\nTotal: R$' + totalPedido)
 
