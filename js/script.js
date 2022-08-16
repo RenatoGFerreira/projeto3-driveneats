@@ -18,7 +18,6 @@ function selecionadoComida(item){
     hamburguerEscolhido = item.querySelector(".text-one").innerHTML
     hamburguerEscolhidoPreco = item.querySelector(".text-three").innerHTML
     
-    console.log(hamburguerEscolhido, hamburguerEscolhidoPreco, item)
     
     botaoContinuar()
 }
@@ -36,7 +35,6 @@ function selecionadoBebida(item){
     bebidaEscolhida = item.querySelector(".text-one").innerHTML
     bebidaEscolhidaPreco = item.querySelector('.text-three').innerHTML
     
-    console.log(bebidaEscolhida, bebidaEscolhidaPreco)
     botaoContinuar()
 }
 
@@ -54,7 +52,6 @@ function selecionadoSobremesa(item){
     sobremesaEscolhida = item.querySelector(".text-one").innerHTML
     sobremesaEscolhidaPreco = item.querySelector(".text-three").innerHTML
     
-    console.log(sobremesaEscolhida, sobremesaEscolhidaPreco)
     botaoContinuar()
 }
 
